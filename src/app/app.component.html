@@ -1,0 +1,9 @@
+<div *ngIf="afAuth.user | async as user; else showNotLoggedIn">
+  <h1>Hello {{user.email}}</h1>
+  <button class="btn btn-danger" (click)="logout()">Logout</button>
+</div>
+<ng-template #showNotLoggedIn>
+    <a class="btn btn-primary" routerLink="/login">Login</a> | <a class="btn btn-secondary" routerLink="/register">Register</a> <br/>
+</ng-template>
+<hr/>
+<router-outlet></router-outlet>

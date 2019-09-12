@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row justify-content-center align-items-center">
+    <div class="col-md-6">
+      <form class="form" #loginForm="ngForm">
+        <h3 class="text-center text-info" i18n>Login</h3>
+        <div class="form-group">
+          <label for="email" class="text-info" i18n>Email:</label><br>
+          <input type="email" name="email" class="form-control" [(ngModel)]="email" required email>
+        </div>
+        <div class="form-group">
+          <label for="password" class="text-info" i18n>Password:</label><br>
+          <input type="password" name="password" class="form-control" [(ngModel)]="password" required minlength="8">
+        </div>
+        <div class="form-group">
+          <label for="rememberMe" class="text-info">
+            <span><input id="remember-me" name="rememberMe" type="checkbox" [(ngModel)]="rememberMe"></span>&nbsp;
+            <span i18n>Remember me</span>
+          </label>
+          <br>
+          <button type="submit" name="submit" class="btn btn-info btn-md" (click)="login()" i18n>Login</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
